@@ -1,0 +1,138 @@
+.carousel {
+  position: relative;
+  width: 100%;
+  margin: 3rem 0;
+  overflow: hidden;
+}
+
+.carouselTrackContainer {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carouselTrack {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carouselSlide {
+  min-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding: 1rem 0;
+}
+
+.technologyItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.086);
+  transition: all 0.3s ease;
+}
+
+.technologyItem:hover {
+  transform: translateY(-5px);
+  background-color: rgba(212, 175, 55, 0.08);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.techIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 80px;
+  margin-bottom: 0.5rem;
+}
+
+.techName {
+  font-weight: 500;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.carouselControl {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: var(--color-white);
+  z-index: 10;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.carouselControl:hover {
+  background-color: var(--color-gold);
+  color: var(--color-black);
+}
+
+.prev {
+  left: -15px;
+}
+
+.next {
+  right: -15px;
+}
+
+.carouselDots {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.activeDot {
+  background-color: var(--color-gold);
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .carouselSlide {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .carouselSlide {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .carouselSlide {
+    grid-template-columns: 1fr;
+  }
+  
+  .prev {
+    left: 5px;
+  }
+  
+  .next {
+    right: 5px;
+  }
+}

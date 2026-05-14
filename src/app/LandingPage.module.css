@@ -1,0 +1,144 @@
+/* Cleaned LandingPage.module.css */
+.mainContainer {
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    background-color: rgba(51, 51, 51, 0.129);
+    backdrop-filter: blur(10px);
+    padding: 0 20px;
+    border-bottom: 2px solid gold;
+    z-index: 1000;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menuItem {
+    padding: 20px;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.menuItem:hover {
+    background-color: gold;
+    color: #333;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.heroSection {
+    position: relative;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gifContainer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.heroText {
+    margin-top: 5px;
+    text-align: center;
+    font-size: medium;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.heroButton {
+    margin-top: 10px;
+    margin-right: 20px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+.heroButton:hover {
+    background-color: #ffaa00;
+    color: #333;
+}
+
+.heroLogo {
+  margin-bottom: 5px;
+}
+
+.section {
+    padding: 40px;
+    background-color: #000;
+}
+
+.titles {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.contentRow {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.contentRowReverse {
+    flex-direction: row-reverse;
+}
+
+.textLeft, .textRight {
+    flex: 1;
+}
+
+.textLeft {
+    text-align: left;
+}
+
+.textRight {
+    text-align: right;
+}
+
+.leftAligned, .RightAligned {
+    align-self: flex-start;
+    display: block;
+    margin-left: 0;
+}
+
+.carouselSection {
+    padding: 40px;
+    background-color: #222;
+    text-align: center;
+}
+
+.carouselItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer {
+    background-color: #333;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
