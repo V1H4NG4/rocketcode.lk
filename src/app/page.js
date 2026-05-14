@@ -3,33 +3,53 @@
 import { useEffect } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
-import ScrollReveal from 'scrollreveal';
 import Carousel from './components/Carousel';
 import './styles/globals.css';
 
 export default function Home() {
-  useEffect(() => {
-    const sr = ScrollReveal({ origin: 'bottom', distance: '60px', duration: 1000, delay: 200, reset: false });
-    document.addEventListener('contextmenu', e => e.preventDefault());
-    sr.reveal('.fade-in', { opacity: 0, scale: 0.9 });
-    sr.reveal('.float-in', { distance: '100px', origin: 'right' });
-    sr.reveal('.slide-up', { distance: '60px', origin: 'bottom' });
-    sr.reveal('.zoom-in', { scale: 0.85, opacity: 0 });
-    sr.reveal('.slide-left', { distance: '80px', origin: 'left' });
-    sr.reveal('.slide-right', { distance: '80px', origin: 'right' });
-  }, []);
 
   useEffect(() => {
     const initScrollReveal = async () => {
       const ScrollReveal = (await import('scrollreveal')).default;
 
-      ScrollReveal().reveal('.fade-in', {
-        distance: '30px',
-        duration: 1000,
-        easing: 'ease',
+      const sr = ScrollReveal({
         origin: 'bottom',
-        interval: 200,
+        distance: '60px',
+        duration: 1000,
+        delay: 200,
         reset: false,
+      });
+
+      document.addEventListener('contextmenu', (e) => e.preventDefault());
+
+      sr.reveal('.fade-in', {
+        opacity: 0,
+        scale: 0.9,
+      });
+
+      sr.reveal('.float-in', {
+        distance: '100px',
+        origin: 'right',
+      });
+
+      sr.reveal('.slide-up', {
+        distance: '60px',
+        origin: 'bottom',
+      });
+
+      sr.reveal('.zoom-in', {
+        scale: 0.85,
+        opacity: 0,
+      });
+
+      sr.reveal('.slide-left', {
+        distance: '80px',
+        origin: 'left',
+      });
+
+      sr.reveal('.slide-right', {
+        distance: '80px',
+        origin: 'right',
       });
     };
 
