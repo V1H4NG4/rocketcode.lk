@@ -942,8 +942,24 @@ img {
 .fade-in,
 .float-in,
 .slide-up,
-.zoom-in {
-  visibility: hidden;
+.zoom-in,
+.slide-left,
+.slide-right {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+
+  .fade-in,
+  .float-in,
+  .slide-up,
+  .zoom-in,
+  .slide-left,
+  .slide-right {
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
 
 /* ============================================
